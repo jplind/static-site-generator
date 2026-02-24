@@ -1,10 +1,10 @@
 import os, shutil
 
-def generate_public():
-    if os.path.exists("public"):
-        shutil.rmtree("public")
-    os.mkdir("public")
-    recursive_copy("static", "public")
+def generate_docs():
+    if os.path.exists("docs"):
+        shutil.rmtree("docs")
+    os.mkdir("docs")
+    recursive_copy("static", "docs")
 
 def recursive_copy(src, dest):
     for item in os.listdir(src):
